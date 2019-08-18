@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import AppleContext from '../context/apple_context'
-
 const initialState = 'apple starts here'
+
+export const AppleContext = React.createContext([initialState, () => {}])
 
 export default ({ children }) => {
   const [apple, setApple] = useState(initialState)

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import PearContext from '../context/pear_context'
-
 const initialState = 'pear starts here'
+
+export const PearContext = React.createContext([initialState, () => {}])
 
 export default ({ children }) => {
   const [pear, setPear] = useState(initialState)

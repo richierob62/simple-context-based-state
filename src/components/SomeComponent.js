@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 
-import AppleState from '../context/apple_context'
-import PearState from '../context/pear_context'
+import { AppleContext } from '../state/apple_state'
+import { PearContext } from '../state/pear_state'
 
 export default () => {
-  const [apple, setApple] = useContext(AppleState)
-  const [pear] = useContext(PearState)
+  const [apple, setApple] = useContext(AppleContext)
+  const [pear, setPear] = useContext(PearContext)
 
   return (
     <div>
@@ -21,7 +21,15 @@ export default () => {
         {apple}
       </h2>
 
-      <h2>{pear}</h2>
+      <h2
+        onClick={() =>
+          setPear(
+            pear.indexOf('starts') > 0 ? 'pear ends here' : 'pear starts here'
+          )
+        }
+      >
+        {pear}
+      </h2>
     </div>
   )
 }
