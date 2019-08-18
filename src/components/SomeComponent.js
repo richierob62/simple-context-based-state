@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 
 import { AppleContext } from '../state/apple_state'
 import { PearContext } from '../state/pear_state'
+import alert from '../async/alert'
 
 export default () => {
   const [apple, setApple] = useContext(AppleContext)
@@ -21,15 +22,7 @@ export default () => {
         {apple}
       </h2>
 
-      <h2
-        onClick={() =>
-          setPear(
-            pear.indexOf('starts') > 0 ? 'pear ends here' : 'pear starts here'
-          )
-        }
-      >
-        {pear}
-      </h2>
+      <h2 onClick={() => alert(pear, setPear)}>{pear}</h2>
     </div>
   )
 }

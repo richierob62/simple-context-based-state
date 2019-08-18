@@ -10,11 +10,11 @@ const App = () => {
   const [apple] = useContext(AppleContext)
   const [pear] = useContext(PearContext)
 
-  const count = [apple, pear].filter(item => item.includes('start')).length
+  const count = [apple, pear].filter(item => item.includes('here')).length
 
   return (
     <div className="App">
-      <h1>{count} starting</h1>
+      <h1>{count} lowercase</h1>
       <SomeComponent />
     </div>
   )
