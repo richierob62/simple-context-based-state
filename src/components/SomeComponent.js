@@ -5,8 +5,8 @@ import { PearContext } from '../state/pear_state'
 import alert from '../async/alert'
 
 export default () => {
-  const [apple, setApple] = useContext(AppleContext)
-  const [pear, setPear] = useContext(PearContext)
+  const { apple, setApple } = useContext(AppleContext)
+  const { pear, setPear } = useContext(PearContext)
 
   return (
     <div>

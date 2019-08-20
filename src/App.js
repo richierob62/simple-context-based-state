@@ -7,8 +7,8 @@ import { PearContext } from './state/pear_state'
 import SomeComponent from './components/SomeComponent'
 
 const App = () => {
-  const [apple] = useContext(AppleContext)
-  const [pear] = useContext(PearContext)
+  const { apple } = useContext(AppleContext)
+  const { pear } = useContext(PearContext)
 
   const count = [apple, pear].filter(item => item.includes('here')).length
 
